@@ -1,5 +1,6 @@
 #!/bin/bash
-
+# Usage:
+# ./SystemBackup.sh $OUTPUT_PATH
 #arg1 output path
 
 computerName="rpicamera"
