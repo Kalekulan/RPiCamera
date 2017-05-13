@@ -3,7 +3,6 @@
 # ./SystemBackup.sh $OUTPUT_PATH
 #arg1 output path
 
-computerName="rpicamera"
 #mountOutputPath="/var/systembackup/mountOutput.txt"
 rsyncOutputPath=$1
 #rsyncOutputPath="/mnt/STORAGE_ee7e0/owncloud_backup"
@@ -28,9 +27,9 @@ echo Killing server...
 service apache2 stop
 sleep 10
 echo $drive is mounted... Executing rsync command.
-rsync -aAxXq --exclude-from=/var/rsync/rsyncExclusions.list /* $rsyncOutputPath/$computerName_rsync_temp
+rsync -aAxXq --exclude-from=/var/rsync/rsyncExclusions.list /* $rsyncOutputPath/rpicamera_rsync_temp
 echo Putting it in a tar...
-tar -cvpzf $rsyncOutputPath/$computerName_backup_$date.tar.gz $rsyncOutputPath/$computerName_rsync_temp
+tar -cvpzf $rsyncOutputPath/$computerName_backup_$date.tar.gz $rsyncOutputPath/rpicamera_rsync_temp
 echo Starting server again.
 service apache2 start
 echo Script is done!
