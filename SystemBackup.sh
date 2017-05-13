@@ -29,7 +29,7 @@ sleep 10
 echo $drive is mounted... Executing rsync command.
 rsync -aAxXq --exclude-from=/var/rsync/rsyncExclusions.list /* $rsyncOutputPath/rpicamera_rsync_temp
 echo Putting it in a tar...
-tar -cvpzf $rsyncOutputPath/$computerName_backup_$date.tar.gz $rsyncOutputPath/rpicamera_rsync_temp
+tar -cvpzf $rsyncOutputPath/rpicamera_backup_$date.tar.gz $rsyncOutputPath/rpicamera_rsync_temp
 echo Starting server again.
 service apache2 start
 echo Script is done!
