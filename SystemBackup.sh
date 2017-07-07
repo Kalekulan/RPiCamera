@@ -3,14 +3,9 @@
 # ./SystemBackup.sh $OUTPUT_PATH
 #arg1 output path
 
-#mountOutputPath="/var/systembackup/mountOutput.txt"
-rsyncOutputPath=$1
-#rsyncOutputPath="/mnt/STORAGE_ee7e0/owncloud_backup"
-drive="STORAGE_ee7e0"
-date=$(date +\%Y\%m\%d)
-
-#> $mountOutputPath
-#mount | grep $drive > $mountOutputPath
+rsyncOutputPath = $1
+drive = "STORAGE_ee7e0"
+date = $(date +\%Y\%m\%d)
 
 echo Checking if $drive is mounted...
 #if [ ! -s $mountOutputPath ]
