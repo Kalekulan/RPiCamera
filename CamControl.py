@@ -8,9 +8,8 @@ def create_fifo():
     ""
 
     path = "/tmp/my_program.fifo"
-    if isfile(path) == False:
-        open(path, 'a').close()
-    fifo = open(path, 'r+')
+    if isfile(path) == False: open(path, 'a').close()
+    else: fifo = open(path, 'r+')
 
     return fifo
 
