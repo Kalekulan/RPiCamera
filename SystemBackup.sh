@@ -8,7 +8,7 @@ drive = "STORAGE_ee7e0"
 date = $(date +\%Y\%m\%d)
 
 echo Checking if $drive is mounted...
-#if [ ! -s $mountOutputPath ]
+
 if ! mount | grep $drive > /dev/null; then
 	echo $drive is not mounted. I will give it a shot...
     mount --all
