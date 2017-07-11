@@ -3,9 +3,9 @@
 # ./SystemBackup.sh $OUTPUT_PATH
 #arg1 output path
 
-rsyncOutputPath = $1
-drive = "STORAGE_ee7e0"
-date = $(date +\%Y\%m\%d)
+rsyncOutputPath=$1
+drive="STORAGE_ee7e0"
+date=$(date +\%Y\%m\%d)
 
 echo Checking if $drive is mounted...
 
